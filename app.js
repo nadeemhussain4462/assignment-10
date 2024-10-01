@@ -41,22 +41,40 @@ alert("The replaced string is: " + replacedString);
 var message = "Ali and Sami are best friends. They play cricket and football together.";
 var replacedMessage = message.replace(/and/g, "&");
 alert("The replaced message is: " + replacedMessage);
-
-
-// Write a program to convert the string “42” to a number and display the result in an alert.
-var stringNumber = "42";
-var number = parseInt(stringNumber);
-alert("The number is: " + number);
-// Write a program to check if the string contains the word “Script”. Display the result in an alert.
-var searchString = "JavaScript";
-var containsScript = searchString.includes("Script");
-alert("The string contains 'Script': " + containsScript);
 // Question no 09
-// Write a program that converts the string “432” to a number and displays the result in an alert.
-var stringNumber1 = "432";
+// Write a program that converts the string “472” to a number and displays the result in an alert.
+var stringNumber1 = "472";
+console.log(stringNumber1)
 var number1 = parseInt(stringNumber1);
+console.log(number1);
 alert("The number is: " + number1);
 // Question no 10
-// Write a program that takes a user input and displays the result in an alert.
-var userInput = prompt("Enter something:");
-alert("You entered: " + userInput);
+// 10. Write a program that takes user input. Convert and show the input in capital letters.
+var userInput = prompt("Enter some text:");
+var uppercaseInput = userInput.toUpperCase();
+alert("The input in uppercase is: " + uppercaseInput);
+// Question no 11
+// Write a program that takes user input. Convert and show the input in title case.
+var userInput1 = prompt("Enter some text:");
+var words = userInput1.split(" ");
+var titleCaseInput = "";
+for (var i = 0; i < words.length; i++) {
+    titleCaseInput += words[i].charAt(0).toUpperCase() + words[i].slice(1).toLowerCase() + " ";
+}
+titleCaseInput = titleCaseInput.trim();
+alert("The input in title case is: " + titleCaseInput);
+// Question no 12
+// Write a program that converts the variable num to a string.
+var num = 35.36;
+var numAsString = num.toString();
+console.log(numAsString);
+// Question no 13 
+// Write a program to take user input and store username in a variable. If the username contains any special symbol among [@ . , !], prompt the user to enter a valid username. For character codes of [@ .
+var username = prompt("Enter your username:");
+var specialChars = "[@ . , !]";
+for (var i = 0; i < username.length; i++) {
+    if (specialChars.indexOf(username.charAt(i)) != -1) {
+        username = prompt("Enter a valid username:");
+    }
+}
+alert("Your username is: " + username);
