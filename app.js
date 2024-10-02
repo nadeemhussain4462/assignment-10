@@ -78,3 +78,67 @@ for (var i = 0; i < username.length; i++) {
     }
 }
 alert("Your username is: " + username);
+// Question no 14
+
+var A = ["cake", "apple pie", "cookie", "chips", "patties"];
+var userInput2 = prompt("Enter an item to search:");
+var found = false;
+for (var i = 0; i < A.length; i++) {
+    if (A[i].toLowerCase() === userInput2.toLowerCase()) {
+        found = true;
+        break;
+    }
+}
+if (found) {
+    alert(userInput2 + " is available in the list");
+} else {
+    alert(userInput2 + " is not available in the list");
+}
+
+// Question no 15
+
+var password = prompt("Enter a password:");
+var isValidPassword = true;
+if (password.length < 6) {
+    isValidPassword = false;
+} else if (isNaN(parseInt(password.charAt(0))) === false) {
+    isValidPassword = false;
+} else {
+    for (var i = 0; i < password.length; i++) {
+        var charCode = password.charCodeAt(i);
+        if ((charCode < 48 || charCode > 57) && (charCode < 65 || charCode > 90) && (charCode < 97 || charCode > 122)) {
+            isValidPassword = false;
+            break;
+        }
+    }
+}
+if (isValidPassword) {
+    alert("Valid password");
+} else {
+    alert("Invalid password. Please enter a password that meets the requirements.");
+}
+
+//  Question no 16
+var university = "University of Karachi";
+var splitUniversity = university.split("");
+var newUniversity = "";
+for (var i = 0; i < splitUniversity.length; i++) {
+    newUniversity += splitUniversity[i] + "\n";
+}
+alert(newUniversity);
+// Question no 17
+var userInput3 = prompt("Enter a character:");
+var lastChar = userInput3.charAt(userInput3.length - 1);
+alert("The last character is: " + lastChar);
+// Question no 18
+var string1 = "The quick brown fox jumps over the lazy dog";
+var string2 = "edabit is awesome";
+var length1 = string1.length;
+var length2 = string2.length;
+if (length1 > length2) {
+    alert("The string 'The quick brown fox jumps over the lazy dog' is longer.");
+} else if (length1 < length2) {
+    alert("The string 'edabit is awesome' is longer.");
+} else {
+    alert("Both strings have the same length.");
+}
